@@ -6,9 +6,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Practicas</title>
         <meta name="description" content="Una guía interactiva de primeros pasos para Brackets.">
-      <!--  <link rel="stylesheet" href="main.css"> -->
+        <link rel="stylesheet" href="../diseño/diseño.css">
     </head>
     <body>
+        <section class="texto">
         <form action="" method="post" id="trabajosocial">
 
             <h1>PRACTICUM DE GRAO</h1>
@@ -45,19 +46,53 @@
             <fieldset>
                 <legend>Titor/a Académico</legend>
                 <select>
-                  <option value="volvo">Pepe</option>
-                  <option value="saab">Ana</option>
-                  <option value="mercedes">Juan</option>
-                  <option value="audi">Xurxo</option>
+                  <option value="Pepe">Pepe</option>
+                  <option value="Ana">Ana</option>
+                  <option value="Juan">Juan</option>
+                  <option value="Xurxo">Xurxo</option>
                 </select>
             </fieldset>
-             <fieldset>
+            <fieldset>
                 <legend>Horas titorizadas</legend>
-                <textarea rows="10" cols="10"></textarea>
+                <textarea rows="" cols=""></textarea>
             </fieldset>
-
+            <fieldset>
+                <legend>Nome da institución</legend>
+                <input type="text" required="true">
+            </fieldset>
+            <fieldset>
+                <legend>CIF ou NIF da empresa</legend>
+                <input type="text" required="true">
+            </fieldset>
+            <fieldset>
+                <legend>Enderezo da institución</legend>
+                Provincia: <input type="text" required="true" >
+                Localidade: <input type="text" required="true" >
+                Enderezo: <input type="text" required="true" >
+                CP: <input type="text" required="true" >
+            </fieldset>
+            <fieldset>
+                <legend>Teléfono de contacto coa institución</legend>
+                <input type="text">
+            </fieldset>
+            <fieldset>
+                <legend>E-mail de contacto coa institución</legend>
+                <input type="text">
+            </fieldset>
+            <fieldset>
+                <legend>Data de inicio do Practicum</legend>
+                <input type="text">
+            </fieldset>
+            <fieldset>
+                <legend>Data de finalización do Practicum</legend>
+                <input type="text">
+            </fieldset>
+            <fieldset>
+                <legend>Horas totais do Practicum</legend>
+                <input type="text">
+            </fieldset>
         </form>
-        <button type="submit" form="trabajosocial" value="Submit">Enviar</button>
-
+            <button type="submit" form="trabajosocial" value="Submit">Enviar</button>
+        </section>
     </body>
 </html>
