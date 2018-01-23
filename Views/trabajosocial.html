@@ -42,11 +42,11 @@
             </fieldset>
             <fieldset>
                 <legend>Teléfono de contacto</legend>
-                <input type="text" pattern="^[0-9]{9}$" size="9" maxlength="9">
+                <input type="text" pattern="[0-9]{9}" size="9" maxlength="9">
             </fieldset>
             <fieldset>
                 <legend>E-mail</legend>
-                <input type="text" required="true" size="50" maxlength="50" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                <input type="text" required="true" size="50" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}">
             </fieldset>
             <fieldset>
                 <legend>Titor/a Académico <h7 class="asterisco">*</h7></legend>
@@ -97,8 +97,9 @@
             </fieldset>
             <fieldset>
                 <legend>Horas totais do Practicum <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" pattern="^[0-9]{1,4}$" size="5" maxlength="5" >
+                <input type="text" required="true" pattern="^[0-9]{1,4}$" size="4" maxlength="4" >
             </fieldset>
+            <input type="text" name="titulacion" style="visibility: hidden;" value="trabajosocial"><br>
             <button type="submit" form="trabajosocial" value="Submit">Enviar</button>
             <button type="reset"  form="trabajosocial" value="Reset">Reestablecer</button>
         </form>

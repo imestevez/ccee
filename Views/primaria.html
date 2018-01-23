@@ -12,13 +12,13 @@
             <h1>PRACTICUM DE GRAO</h1>
             <H4>DATOS PARA A DOCUMENTACIÓN DO PRACTICUM</H4>
             <H5>Documento D8 da normativa vixente das Prácticas Externas Curriculares</H5>
-            <h5>*Campo Obligatorio</h5>
+            <h6>*Campo Obligatorio</h6>
         </section>
         <section class="texto">
         <form action="" method="post" id="primaria">          
             <fieldset>
                 <legend>Curso Académico</legend>
-                <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4">/
+                <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4"> / 
                 <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4">
             </fieldset>
             <fieldset>
@@ -62,7 +62,7 @@
             <fieldset>
                 <legend>Enderezo da institución</legend>
                 <label> Provincia: </label><input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}" >
-                <label> Localidade: </label><input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}" >
+                <label> Localidade: </label><input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}" > <br><br>
                 <label> Enderezo: </label> <input type="text" required="true" size="50" maxlength="50" >
                 <label> CP: </label> <input type="text" required="true" pattern="[0-9]{5}" size="5" maxlength="5">
             </fieldset>
@@ -75,6 +75,8 @@
                 <input type="date" required="true">
             </fieldset>
             <button type="submit" form="primaria" value="Submit">Enviar</button>
+            <button type="reset"  form="primaria" value="Reset">Reestablecer</button>
+            
         </form>
         </section>
     </body>
