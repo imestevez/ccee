@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html>
-
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Traballo Social</title>
         <meta name="description" >
-        <link rel="stylesheet" href="./style/style.css">
+        <link rel="stylesheet" href="../style/style.css">
     </head>
     <body>
-        <section class="titulo"><h1>PRACTICUM DE GRAO</h1>
-        <H4>DATOS PARA A DOCUMENTACIÓN DO PRACTICUM</H4>
-        <H5>Documento D8 da normativa vixente das Prácticas Externas Curriculares</H5>
-        <h6>*Campo Obligatorio</h6></section>
+        <section class="titulo">
+            <h1>PRACTICUM DE GRAO</h1>
+            <H4>DATOS PARA A DOCUMENTACIÓN DO PRACTICUM</H4>
+            <H5>Documento D8 da normativa vixente das Prácticas Externas Curriculares</H5>
+            <h6>*Campo Obligatorio</h6>
+        </section>
         <section class="texto">
         <form action="" method="post" id="trabajosocial">          
             <fieldset>
                 <legend>Curso Académico</legend>
-                <input type="text" required="true" pattern="[0-9]{4}">/
-                <input type="text" required="true" pattern="[0-9]{4}">
+                <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4">/
+                <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4">
             </fieldset>
             <fieldset>
                 <legend>Nome</legend>
-                <input type="text" required="true">
+                <input type="text" required="true" size="50" maxlength="50" >
             </fieldset>
             <fieldset>
                 <legend>Apelidos</legend>
-                <input type="text" required="true">
+                <input type="text" required="true" size="50" maxlength="50">
             </fieldset>
             <fieldset>
                 <legend>NIF</legend>
-                <input type="text" required="true" pattern="[0-9]{8}[A-Z]{1}">
+                <input type="text" required="true" pattern="[0-9]{8}[A-Z]{1}" size="50" maxlength="50">
             </fieldset>
             <fieldset>
                 <legend>Enderezo</legend>
-                <label> Provincia: </label><input type="text" required="true" >
-                <label> Localidade: </label><input type="text" required="true" >
-                <label> Enderezo: </label><input type="text" required="true" >
-                <label> CP: </label><input type="text" required="true" pattern="[0-9]{5}">
+                <label> Provincia</label><input type="text" required="true"  size="30" maxlength="30"> 
+                <label> Localidade</label><input type="text" required="true" size="30" maxlength="30"> 
+                <label> Enderezo</label><input type="text" required="true" size="50" maxlength="50"> 
+                <label> CP</label><input type="text" required="true" pattern="[0-9]{5}" size="5" maxlength="5">
             </fieldset>
             <fieldset>
                 <legend>Teléfono de contacto</legend>
