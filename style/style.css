@@ -1,0 +1,32 @@
+label{
+	color: #088A85;
+}
+h6{
+	color: red;
+	font-size: 14px;
+}
+
+fieldset{
+	border: 0px solid white;
+	border-style: none;
+}
+
+legend{
+	color: #088A85;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.texto{
+	color: blue;
+}
+.titulo{
+	margin: 2.5%;
+	color: #088A85;
+}
+h4{
+	color: #424242;
+}
+h5{
+	color: #424242;
+}
