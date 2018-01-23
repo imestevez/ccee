@@ -23,30 +23,30 @@
             </fieldset>
             <fieldset>
                 <legend>Nome</legend>
-                <input type="text" required="true" size="50" maxlength="50" >
+                <input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}">
             </fieldset>
             <fieldset>
                 <legend>Apelidos</legend>
-                <input type="text" required="true" size="50" maxlength="50">
+                <input type="text" required="true" size="50" maxlength="50" pattern="[A-Za-z]{50}">
             </fieldset>
             <fieldset>
                 <legend>NIF</legend>
-                <input type="text" required="true" pattern="[0-9]{8}[A-Z]{1}" size="50" maxlength="50">
+                <input type="text" required="true" pattern="[0-9]{8}[A-Za-z]{1}" size="9" maxlength="9">
             </fieldset>
             <fieldset>
                 <legend>Enderezo</legend>
-                <label> Provincia</label><input type="text" required="true"  size="30" maxlength="30"> 
-                <label> Localidade</label><input type="text" required="true" size="30" maxlength="30"> 
-                <label> Enderezo</label><input type="text" required="true" size="50" maxlength="50"> 
-                <label> CP</label><input type="text" required="true" pattern="[0-9]{5}" size="5" maxlength="5">
+                <label> Provincia </label><input type="text" required="true"  size="30" maxlength="30" pattern="[A-Za-z]{30}"> 
+                <label> Localidade </label><input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}"> 
+                <label> Enderezo </label><input type="text" required="true" size="50" maxlength="50"> 
+                <label> CP </label><input type="text" required="true" pattern="[0-9]{5}" size="5" maxlength="5">
             </fieldset>
             <fieldset>
                 <legend>Teléfono de contacto</legend>
-                <input type="text">
+                <input type="text" pattern="[0-9]{9}" size="9" maxlength="9">
             </fieldset>
             <fieldset>
                 <legend>E-mail</legend>
-                <input type="text" required="true">
+                <input type="text" required="true" size="50" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
             </fieldset>
             <fieldset>
                 <legend>Titor/a Académico</legend>
@@ -63,26 +63,26 @@
             </fieldset>
             <fieldset>
                 <legend>Nome da institución</legend>
-                <input type="text" required="true">
+                <input type="text" required="true" size="30" maxlength="30">
             </fieldset>
             <fieldset>
                 <legend>CIF ou NIF da empresa</legend>
-                <input type="text" required="true">
+                <input type="text" required="true" size="30" maxlength="30">
             </fieldset>
             <fieldset>
                 <legend>Enderezo da institución</legend>
-                <label> Provincia: </label><input type="text" required="true" >
-                <label> Localidade: </label><input type="text" required="true" >
-                <label> Enderezo: </label> <input type="text" required="true" >
-                <label> CP: </label> <input type="text" required="true" pattern="[0-9]{5} ">
+                <label> Provincia: </label><input type="text" required="true" size="30" maxlength="30" >
+                <label> Localidade: </label><input type="text" required="true" size="30" maxlength="30">
+                <label> Enderezo: </label> <input type="text" required="true" size="50" maxlength="50">
+                <label> CP: </label> <input type="text" required="true" pattern="[0-9]{5}" size="5" maxlength="5">
             </fieldset>
             <fieldset>
                 <legend>Teléfono de contacto coa institución</legend>
-                <input type="text">
+                <input type="text" size="9" maxlength="9">
             </fieldset>
             <fieldset>
                 <legend>E-mail de contacto coa institución</legend>
-                <input type="text">
+                <input type="text" size="50" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
             </fieldset>
             <fieldset>
                 <legend>Data de inicio do Practicum</legend>
@@ -94,7 +94,7 @@
             </fieldset>
             <fieldset>
                 <legend>Horas totais do Practicum</legend>
-                <input type="text" required="true" pattern="[0-9]{4}">
+                <input type="text" required="true" pattern="[0-9]{4}" size="5" maxlength="5" >
             </fieldset>
         </form>
             <button type="submit" form="trabajosocial" value="Submit">Enviar</button>
