@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Practicas</title>
+        <meta name="description" content="Una guía interactiva de primeros pasos para Brackets.">
+      <!--  <link rel="stylesheet" href="main.css"> -->
+    </head>
+    <body>
+        <form action="" method="post" id="trabajosocial">
+
+            <h1>PRACTICUM DE GRAO</h1>
+            <H4>DATOS PARA A DOCUMENTACIÓN DO PRACTICUM</H4>
+            <H5>Documento D8 da normativa vixente das Prácticas Externas Curriculares</H5>
+            
+            <fieldset style="">
+                <legend>Nome</legend>
+                <input type="text" required="true">
+            </fieldset>
+            <fieldset>
+                <legend>Apelidos</legend>
+                <input type="text" required="true">
+            </fieldset>
+            <fieldset>
+                <legend>NIF</legend>
+                <input type="text" required="true" pattern="[0-9]{8}[A-Z]{1}">
+            </fieldset>
+            <fieldset>
+                <legend>Enderezo</legend>
+                Provincia: <input type="text" required="true" >
+                Localidade: <input type="text" required="true" >
+                Enderezo: <input type="text" required="true" >
+                CP: <input type="text" required="true" >
+            </fieldset>
+            <fieldset>
+                <legend>Teléfono de contacto</legend>
+                <input type="text">
+            </fieldset>
+            <fieldset>
+                <legend>E-mail</legend>
+                <input type="text" required="true">
+            </fieldset>
+            <fieldset>
+                <legend>Titor/a Académico</legend>
+                <select>
+                  <option value="volvo">Pepe</option>
+                  <option value="saab">Ana</option>
+                  <option value="mercedes">Juan</option>
+                  <option value="audi">Xurxo</option>
+                </select>
+            </fieldset>
+             <fieldset>
+                <legend>Horas titorizadas</legend>
+                <textarea rows="10" cols="10"></textarea>
+            </fieldset>
+
+        </form>
+        <button type="submit" form="trabajosocial" value="Submit">Enviar</button>
+
+    </body>
+</html>
