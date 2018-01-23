@@ -17,7 +17,7 @@
         <section class="texto">
         <form action="" method="post" id="trabajosocial">          
             <fieldset>
-                <legend>Curso Académico</legend>
+                <legend>Curso Académico</legend> 
                 <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4">/
                 <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4">
             </fieldset>
@@ -50,6 +50,7 @@
             </fieldset>
             <fieldset>
                 <legend>Titor/a Académico</legend>
+                <label>Elixe desta lista o nome do teu titor/a da Facultade</label><br>
                 <select>
                   <option value="Pepe">Pepe</option>
                   <option value="Ana">Ana</option>
@@ -59,11 +60,13 @@
             </fieldset>
             <fieldset>
                 <legend>Horas titorizadas</legend>
-                <textarea rows="" cols=""></textarea>
+                <label>No caso de ter mais de un tutor, debes indicar cantas horas titorizou cada un.
+                Por exemplo José Pérez Pérez 250h</label> <br>
+                <textarea rows="10" cols="60"  maxlength="60" ></textarea>
             </fieldset>
             <fieldset>
                 <legend>Nome da institución</legend>
-                <input type="text" required="true" size="30" maxlength="30">
+                <input type="text" required="true" size="30" maxlength="30" >
             </fieldset>
             <fieldset>
                 <legend>CIF ou NIF da empresa</legend>
@@ -71,14 +74,14 @@
             </fieldset>
             <fieldset>
                 <legend>Enderezo da institución</legend>
-                <label> Provincia: </label><input type="text" required="true" size="30" maxlength="30" >
-                <label> Localidade: </label><input type="text" required="true" size="30" maxlength="30">
-                <label> Enderezo: </label> <input type="text" required="true" size="50" maxlength="50">
+                <label> Provincia: </label><input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}" >
+                <label> Localidade: </label><input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}">
+                <label> Enderezo: </label> <input type="text" required="true" size="50" maxlength="50" >
                 <label> CP: </label> <input type="text" required="true" pattern="[0-9]{5}" size="5" maxlength="5">
             </fieldset>
             <fieldset>
                 <legend>Teléfono de contacto coa institución</legend>
-                <input type="text" size="9" maxlength="9">
+                <input type="text" size="9" maxlength="9" pattern="[0-9]{9}">
             </fieldset>
             <fieldset>
                 <legend>E-mail de contacto coa institución</legend>
@@ -96,8 +99,8 @@
                 <legend>Horas totais do Practicum</legend>
                 <input type="text" required="true" pattern="[0-9]{4}" size="5" maxlength="5" >
             </fieldset>
-        </form>
             <button type="submit" form="trabajosocial" value="Submit">Enviar</button>
+        </form>
         </section>
     </body>
 </html>

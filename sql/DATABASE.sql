@@ -30,6 +30,7 @@ GRANT ALL PRIVILEGES ON `ccee`.* TO `ccee`@`localhost` WITH GRANT OPTION;
 
 CREATE TABLE `TRABAJO_SOCIAL` ( 
 	`titulacion` VARCHAR(30) NOT NULL , 
+	`cursoAcademico` VARCHAR(9) NOT NULL , 
 	`nombre` VARCHAR(30) NOT NULL , 
 	`apellidos` VARCHAR(50) NOT NULL , 
 	`dni` VARCHAR(9) NOT NULL , 
@@ -51,4 +52,59 @@ CREATE TABLE `TRABAJO_SOCIAL` (
 	`emailIns` VARCHAR(50) NULL , 
 	`fechaIni` DATE NOT NULL , 
 	`fechaFin` DATE NOT NULL , 
-	`horasPrac` FLOAT(4,2) NOT NULL ) ENGINE = InnoDB;
+	`horasPrac` FLOAT(4,2) NOT NULL,
+	PRIMARY KEY (dni)) 	ENGINE = InnoDB;
+
+CREATE TABLE `EDUCACION_SOCIAL` ( 
+	`titulacion` VARCHAR(30) NOT NULL , 
+	`cursoAcademico` VARCHAR(9) NOT NULL , 
+	`nombre` VARCHAR(30) NOT NULL , 
+	`apellidos` VARCHAR(50) NOT NULL , 
+	`dni` VARCHAR(9) NOT NULL , 
+	`practicum` VARCHAR(2) NOT NULL , 
+	`tutorA` VARCHAR(50) NOT NULL ,
+	`tutorE` VARCHAR(50) NOT NULL ,
+	`nombreIns` VARCHAR(30) NOT NULL ,  
+	`fechaIni` DATE NOT NULL , 
+	`fechaFin` DATE NOT NULL , 
+	`horasPrac` FLOAT(4,2) NOT NULL,
+	PRIMARY KEY (dni))) ENGINE = InnoDB;
+
+CREATE TABLE `EDUCACION_INFANTIL` ( 
+	`titulacion` VARCHAR(30) NOT NULL , 
+	`cursoAcademico` VARCHAR(9) NOT NULL , 
+	`nombre` VARCHAR(30) NOT NULL , 
+	`apellidos` VARCHAR(50) NOT NULL , 
+	`dni` VARCHAR(9) NOT NULL ,
+	`mencion` VARCHAR(50) NOT NULL ,  
+	`tutorA` VARCHAR(50) NOT NULL , 
+	`tutorE` VARCHAR(50) NOT NULL , 
+	`nombreIns` VARCHAR(30) NOT NULL , 
+	`cif` VARCHAR(9) NULL , 
+	`provinciaIns` VARCHAR(30) NOT NULL , 
+	`localidadIns` VARCHAR(30) NOT NULL , 
+	`direccionIns` VARCHAR(50) NOT NULL , 
+	`cpIns` INT(5) NOT NULL ,
+	`fechaIni` DATE NOT NULL , 
+	`fechaFin` DATE NOT NULL,
+	PRIMARY KEY (dni)) ENGINE = InnoDB; 
+	
+
+CREATE TABLE `EDUCACION_PRIMARIA` ( 
+	`titulacion` VARCHAR(30) NOT NULL , 
+	`cursoAcademico` VARCHAR(9) NOT NULL , 
+	`nombre` VARCHAR(30) NOT NULL , 
+	`apellidos` VARCHAR(50) NOT NULL , 
+	`dni` VARCHAR(9) NOT NULL ,
+	`mencion` VARCHAR(50) NOT NULL ,  
+	`tutorA` VARCHAR(50) NOT NULL , 
+	`tutorE` VARCHAR(50) NOT NULL , 
+	`nombreIns` VARCHAR(30) NOT NULL , 
+	`cif` VARCHAR(9) NULL , 
+	`provinciaIns` VARCHAR(30) NOT NULL , 
+	`localidadIns` VARCHAR(30) NOT NULL , 
+	`direccionIns` VARCHAR(50) NOT NULL , 
+	`cpIns` INT(5) NOT NULL ,
+	`fechaIni` DATE NOT NULL , 
+	`fechaFin` DATE NOT NULL,
+	PRIMARY KEY (dni)) ENGINE = InnoDB; 

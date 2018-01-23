@@ -18,8 +18,8 @@
         <form action="" method="post" id="infantil">          
             <fieldset>
                 <legend>Curso Académico</legend>
-                <input type="text" required="true" pattern="[0-9]{4}">/
-                <input type="text" required="true" pattern="[0-9]{4}">
+                <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4">/
+                <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4">
             </fieldset>
             <fieldset>
                 <legend>Mención</legend>
@@ -31,18 +31,19 @@
             </fieldset>
             <fieldset>
                 <legend>Nome</legend>
-                <input type="text" required="true">
+                <input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}">
             </fieldset>
             <fieldset>
                 <legend>Apelidos</legend>
-                <input type="text" required="true">
+                <input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{50}">
             </fieldset>
             <fieldset>
                 <legend>NIF</legend>
-                <input type="text" required="true" pattern="[0-9]{8}[A-Z]{1}">
+                <input type="text" required="true" pattern="[0-9]{8}[A-Z]{1}" size="9" maxlength="9">
             </fieldset>
             <fieldset>
                 <legend>Titor/a Académico</legend>
+                <label>Elixe desta lista o nome do teu titor/a da Facultade</label><br>
                 <select>
                   <option value="Pepe">Pepe</option>
                   <option value="Ana">Ana</option>
@@ -52,18 +53,18 @@
             </fieldset>
             <fieldset>
                 <legend>Nome da institución</legend>
-                <input type="text" required="true">
+                <input type="text" required="true" size="30" maxlength="30" >
             </fieldset>
             <fieldset>
                 <legend>CIF ou NIF da empresa</legend>
-                <input type="text" required="true">
+                <input type="text" required="true" size="9" maxlength="9">
             </fieldset>
             <fieldset>
                 <legend>Enderezo da institución</legend>
-                <label> Provincia: </label><input type="text" required="true" >
-                <label> Localidade: </label><input type="text" required="true" >
-                <label> Enderezo: </label> <input type="text" required="true" >
-                <label> CP: </label> <input type="text" required="true" pattern="[0-9]{5} ">
+                <label> Provincia: </label><input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}" >
+                <label> Localidade: </label><input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}" >
+                <label> Enderezo: </label> <input type="text" required="true" size="50" maxlength="50" >
+                <label> CP: </label> <input type="text" required="true" pattern="[0-9]{5}" size="5" maxlength="5">
             </fieldset>
             <fieldset>
                 <legend>Data de inicio do Practicum</legend>
@@ -73,8 +74,8 @@
                 <legend>Data de finalización do Practicum</legend>
                 <input type="date" required="true">
             </fieldset>
-        </form>
             <button type="submit" form="infantil" value="Submit">Enviar</button>
+        </form>
         </section>
     </body>
 </html>
