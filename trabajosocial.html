@@ -15,7 +15,7 @@
         <h6>*Campo Obligatorio</h6></section>
         <section class="texto">
         <form action="" method="post" id="trabajosocial">          
-            <fieldset style="">
+            <fieldset>
                 <legend>Nome</legend>
                 <input type="text" required="true">
             </fieldset>
@@ -29,10 +29,10 @@
             </fieldset>
             <fieldset>
                 <legend>Enderezo</legend>
-                Provincia: <input type="text" required="true" >
-                Localidade: <input type="text" required="true" >
-                Enderezo: <input type="text" required="true" >
-                CP: <input type="text" required="true" >
+                <label> Provincia: </label><input type="text" required="true" >
+                <label> Localidade: </label><input type="text" required="true" >
+                <label> Enderezo: </label><input type="text" required="true" >
+                <label> CP: </label><input type="text" required="true" pattern="[0-9]{5}">
             </fieldset>
             <fieldset>
                 <legend>Teléfono de contacto</legend>
@@ -65,10 +65,10 @@
             </fieldset>
             <fieldset>
                 <legend>Enderezo da institución</legend>
-                Provincia: <input type="text" required="true" >
-                Localidade: <input type="text" required="true" >
-                Enderezo: <input type="text" required="true" >
-                CP: <input type="text" required="true" >
+                <label> Provincia: </label><input type="text" required="true" >
+                <label> Localidade: </label><input type="text" required="true" >
+                <label> Enderezo: </label> <input type="text" required="true" >
+                <label> CP: </label> <input type="text" required="true" pattern="[0-9]{5}" >
             </fieldset>
             <fieldset>
                 <legend>Teléfono de contacto coa institución</legend>
@@ -80,15 +80,15 @@
             </fieldset>
             <fieldset>
                 <legend>Data de inicio do Practicum</legend>
-                <input type="text">
+                <input type="date" required="true">
             </fieldset>
             <fieldset>
                 <legend>Data de finalización do Practicum</legend>
-                <input type="date">
+                <input type="date" required="true">
             </fieldset>
             <fieldset>
                 <legend>Horas totais do Practicum</legend>
-                <input type="date" required="true">
+                <input type="text" required="true" pattern="[0-9]{4}">
             </fieldset>
         </form>
             <button type="submit" form="trabajosocial" value="Submit">Enviar</button>
