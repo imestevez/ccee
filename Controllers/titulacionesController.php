@@ -27,6 +27,7 @@ $emailIns = null;
 $fechaIni = null;
 $fechaFin = null;
 $horasPrac = null;
+$cursoAcademico = null;
 
 
 	if(isset($_REQUEST['titulacion'])){
@@ -118,6 +119,9 @@ $horasPrac = null;
 	if(isset($_REQUEST['horasPrac'])){
 		$horasPrac = $_REQUEST['horasPrac'];
 	}
+	if(isset($_REQUEST['cursoAcademico'])){
+		$horasPrac = $_REQUEST['cursoAcademico'];
+	}
 
 	$lista =array(
 		'nombre' => $nombre,
@@ -141,6 +145,7 @@ $horasPrac = null;
 		'fechaIni' => $fechaIni,
 		'fechaFin' => $fechaFin,
 		'horasPrac' => $horasPrac,
+		'cursoAcademico' => $cursoAcademico
 
 	);
 
@@ -149,23 +154,304 @@ $horasPrac = null;
 }
 
 //datos del formulario de Educacion social
-get_data_from_ES(){
+function get_data_from_ES(){
+	$titulacion = null;
+	$nombre = null;
+	$apellidos = null;
+	$dni = null;
+	$practicum = null;
+	$tutorA = null;
+	$tutorE = null;
+	$nombreIns = null;
+	$fechaIni = null;
+	$fechaFin = null;
+	$horasPrac = null;
+	$cursoAcademico = null;
 
-if(isset($_REQUEST[]))
+	if(isset($_REQUEST['titulacion'])){
+			$titulacion = $_REQUEST['titulacion'];
+	}
+	if(isset($_REQUEST['nombre'])){
+			$titulacion = $_REQUEST['nombre'];
+	}
+	if(isset($_REQUEST['apellidos'])){
+			$titulacion = $_REQUEST['apellidos'];
+	}
+	if(isset($_REQUEST['dni'])){
+			$titulacion = $_REQUEST['dni'];
+	}
+	if(isset($_REQUEST['practicum'])){
+			$titulacion = $_REQUEST['practicum'];
+	}
+	if(isset($_REQUEST['tutorA'])){
+			$titulacion = $_REQUEST['tutorA'];
+	}
+	if(isset($_REQUEST['tutorE'])){
+			$titulacion = $_REQUEST['tutorE'];
+	}
+	if(isset($_REQUEST['nombreIns'])){
+			$titulacion = $_REQUEST['nombreIns'];
+	}
+	if(isset($_REQUEST['fechaIni'])){
+			$titulacion = $_REQUEST['fechaIni'];
+	}
+	if(isset($_REQUEST['fechaFin'])){
+			$titulacion = $_REQUEST['fechaFin'];
+	}
+	if(isset($_REQUEST['horasPrac'])){
+			$horasPrac = $_REQUEST['horasPrac'];
+		}
+	if(isset($_REQUEST['cursoAcademico'])){
+		$horasPrac = $_REQUEST['cursoAcademico'];
+	}
 
-}
-//datos del formulario de Educacion Primaria
-get_data_from_EP(){
+	$lista =array(
+		'nombre' => $nombre,
+		'apellidos' => $apellidos,
+		'dni' => $dni,
+		'practicum' => $practicum,
+		'tutorA' => $tutorA,
+		'tutorE' => $tutorE,
+		'nombreIns' => $nombreIns,
+		'fechaIni' => $fechaIni,
+		'fechaFin' => $fechaFin,
+		'horasPrac' => $horasPrac,
+		'cursoAcademico' => $cursoAcademico
 
-if(isset($_REQUEST[]))
+	);
 
-}
+	$ES = new MODELO_DB($titulacion, $lista);
+
+
 //datos del formulario de Educacion Infantil
-get_data_from_EI(){
+function get_data_from_EI(){
+	$titulacion = null;
+	$nombre = null;
+	$apellidos = null;
+	$mencion = null;
+	$dni = null;
+	$tutorA = null;
+	//$tutorE = null;
+	$nombreIns = null;
+	$cif = null;
+	$provinciaIns = null;
+	$localidadIns = null;
+	$direccionIns = null;
+	$cpIns = null;
+	$fechaIni = null;
+	$fechaFin = null;
+	//$horasPrac = null;
+	$cursoAcademico = null;
 
-if(isset($_REQUEST[]))
+if(isset($_REQUEST['titulacion'])){
+		$titulacion = $_REQUEST['titulacion'];
+	}
+	if(isset($_REQUEST['nombre'])){
+		$nombre = $_REQUEST['nombre'];
+	} 
+	if(isset($_REQUEST['apellidos'])){
+		$apellidos = $_REQUEST['apellidos'];
+
+	}
+	if(isset($_REQUEST['dni'])){
+		$dni = $_REQUEST['dni'];
+
+	} 
+	if(isset($_REQUEST['mencion'])){
+		$provincia = $_REQUEST['mencion'];
+
+	}
+
+	if(isset($_REQUEST['tutorA'])){
+		$tutorA = $_REQUEST['tutorA'];
+
+	}
+
+	/*if(isset($_REQUEST['tutorA'])){
+		$tutorA = $_REQUEST['tutorA'];
+
+	}*/
+
+	if(isset($_REQUEST['nombreIns'])){
+		$nombreIns = $_REQUEST['nombreIns'];
+
+	} 
+	if(isset($_REQUEST['cif'])){
+		$cif = $_REQUEST['cif'];
+
+	}
+	if(isset($_REQUEST['provinciaIns'])){
+		$provinciaIns = $_REQUEST['provinciaIns'];
+
+	}
+	if(isset($_REQUEST['localidadIns'])){
+		$localidadIns = $_REQUEST['localidadIns'];
+
+	}
+	if(isset($_REQUEST['direccionIns'])){
+		$direccionIns = $_REQUEST['direccionIns'];
+
+	} 
+	if(isset($_REQUEST['cpIns'])){
+		$cpIns = $_REQUEST['cpIns'];
+
+	}
+
+	if(isset($_REQUEST['fechaIni'])){
+		$fechaIni = $_REQUEST['fechaIni'];
+
+	}
+	if(isset($_REQUEST['fechaFin'])){
+		$fechaFin = $_REQUEST['fechaFin'];
+
+	} 
+	/*if(isset($_REQUEST['horasPrac'])){
+		$horasPrac = $_REQUEST['horasPrac'];
+	}*/
+	if(isset($_REQUEST['cursoAcademico'])){
+		$horasPrac = $_REQUEST['cursoAcademico'];
+	}
+
+$lista =array(
+		'nombre' => $nombre,
+		'apellidos' => $apellidos,
+		'dni' => $dni,
+		'mencion' => $mencion,
+		'tutorA' => $tutorA,
+		//'tutorE' => $tutorE,
+		'nombreIns' => $nombreIns,
+		'cif' => $cif,
+		'provinciaIns' => $provinciaIns,
+		'localidadIns' => $localidadIns,
+		'direccionIns' => $direccionIns,
+		'cpIns' => $cpIns,
+		'fechaIni' => $fechaIni,
+		'fechaFin' => $fechaFin,
+		//'horasPrac' => $horasPrac,
+		'cursoAcademico' => $cursoAcademico
+
+	);
+
+	$EI = new MODELO_DB($titulacion, $lista);
 
 }
+
+
+
+//datos del formulario de Educacion Primaria
+function get_data_from_EP(){
+
+$titulacion = null;
+	$nombre = null;
+	$apellidos = null;
+	$mencion = null;
+	$dni = null;
+	$tutorA = null;
+	//$tutorE = null;
+	$nombreIns = null;
+	$cif = null;
+	$provinciaIns = null;
+	$localidadIns = null;
+	$direccionIns = null;
+	$cpIns = null;
+	$fechaIni = null;
+	$fechaFin = null;
+	//$horasPrac = null;
+	$cursoAcademico = null;
+
+if(isset($_REQUEST['titulacion'])){
+		$titulacion = $_REQUEST['titulacion'];
+	}
+	if(isset($_REQUEST['nombre'])){
+		$nombre = $_REQUEST['nombre'];
+	} 
+	if(isset($_REQUEST['apellidos'])){
+		$apellidos = $_REQUEST['apellidos'];
+
+	}
+	if(isset($_REQUEST['dni'])){
+		$dni = $_REQUEST['dni'];
+
+	} 
+	if(isset($_REQUEST['mencion'])){
+		$provincia = $_REQUEST['mencion'];
+
+	}
+
+	if(isset($_REQUEST['tutorA'])){
+		$tutorA = $_REQUEST['tutorA'];
+
+	}
+
+	/*if(isset($_REQUEST['tutorA'])){
+		$tutorA = $_REQUEST['tutorA'];
+
+	}*/
+
+	if(isset($_REQUEST['nombreIns'])){
+		$nombreIns = $_REQUEST['nombreIns'];
+
+	} 
+	if(isset($_REQUEST['cif'])){
+		$cif = $_REQUEST['cif'];
+
+	}
+	if(isset($_REQUEST['provinciaIns'])){
+		$provinciaIns = $_REQUEST['provinciaIns'];
+
+	}
+	if(isset($_REQUEST['localidadIns'])){
+		$localidadIns = $_REQUEST['localidadIns'];
+
+	}
+	if(isset($_REQUEST['direccionIns'])){
+		$direccionIns = $_REQUEST['direccionIns'];
+
+	} 
+	if(isset($_REQUEST['cpIns'])){
+		$cpIns = $_REQUEST['cpIns'];
+
+	}
+
+	if(isset($_REQUEST['fechaIni'])){
+		$fechaIni = $_REQUEST['fechaIni'];
+
+	}
+	if(isset($_REQUEST['fechaFin'])){
+		$fechaFin = $_REQUEST['fechaFin'];
+
+	} 
+	/*if(isset($_REQUEST['horasPrac'])){
+		$horasPrac = $_REQUEST['horasPrac'];
+	}*/
+	if(isset($_REQUEST['cursoAcademico'])){
+		$horasPrac = $_REQUEST['cursoAcademico'];
+	}
+
+$lista =array(
+		'nombre' => $nombre,
+		'apellidos' => $apellidos,
+		'dni' => $dni,
+		'mencion' => $mencion,
+		'tutorA' => $tutorA,
+		//'tutorE' => $tutorE,
+		'nombreIns' => $nombreIns,
+		'cif' => $cif,
+		'provinciaIns' => $provinciaIns,
+		'localidadIns' => $localidadIns,
+		'direccionIns' => $direccionIns,
+		'cpIns' => $cpIns,
+		'fechaIni' => $fechaIni,
+		'fechaFin' => $fechaFin,
+		//'horasPrac' => $horasPrac,
+		'cursoAcademico' => $cursoAcademico
+
+	);
+
+	$EP = new MODELO_DB($titulacion, $lista);
+
+}
+
 
 //Si trae post de un formulario
 if(isset($_REQUEST["titulacion"])){
@@ -173,23 +459,21 @@ if(isset($_REQUEST["titulacion"])){
 }else{
 	$titulacion = '';
 }
-
-
 	switch ($titulacion) {
 		case 'trabajosocial':
 			get_data_from_TS();
 			break;
 		case 'educacionsocial':
-			
+			get_data_from_ES();
 			break;
 		case 'infantil':
-			
+			get_data_from_EI();
 			break;
 		case 'primaria':
-			
+			get_data_from_EP();
 			break;
 		default:
-			
+			header('Location:../index.php');
 			break;
 	}
 ?>
