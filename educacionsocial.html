@@ -4,8 +4,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Traballo Social</title>
-        <meta name="description" >
+        <title>Educación Social </title>
+        <meta name="description" content="Una guía interactiva de primeros pasos para Brackets.">
         <link rel="stylesheet" href="./style/style.css">
     </head>
     <body>
@@ -14,7 +14,12 @@
         <H5>Documento D8 da normativa vixente das Prácticas Externas Curriculares</H5>
         <h5>*Campo Obligatorio</h5>
         <section class="texto">
-        <form action="" method="post" id="trabajosocial">          
+        <form action="" method="post" id="educacionsocial">          
+            <fieldset>
+                <legend>Practicum</legend>
+                <input type="radio" name="practicum" value="1">Prácticum I<br>
+                <input type="radio" name="practicum" value="2">Prácticum II<br>
+            </fieldset>
             <fieldset>
                 <legend>Curso Académico</legend>
                 <input type="text" required="true" pattern="[0-9]{4}">/
@@ -33,21 +38,6 @@
                 <input type="text" required="true" pattern="[0-9]{8}[A-Z]{1}">
             </fieldset>
             <fieldset>
-                <legend>Enderezo</legend>
-                <label> Provincia: </label><input type="text" required="true" >
-                <label> Localidade: </label><input type="text" required="true" >
-                <label> Enderezo: </label><input type="text" required="true" >
-                <label> CP: </label><input type="text" required="true" pattern="[0-9]{5}">
-            </fieldset>
-            <fieldset>
-                <legend>Teléfono de contacto</legend>
-                <input type="text">
-            </fieldset>
-            <fieldset>
-                <legend>E-mail</legend>
-                <input type="text" required="true">
-            </fieldset>
-            <fieldset>
                 <legend>Titor/a Académico</legend>
                 <select>
                   <option value="Pepe">Pepe</option>
@@ -57,31 +47,12 @@
                 </select>
             </fieldset>
             <fieldset>
-                <legend>Horas titorizadas</legend>
-                <textarea rows="" cols=""></textarea>
-            </fieldset>
-            <fieldset>
                 <legend>Nome da institución</legend>
                 <input type="text" required="true">
             </fieldset>
             <fieldset>
-                <legend>CIF ou NIF da empresa</legend>
+                <legend>Titor/a externo</legend>
                 <input type="text" required="true">
-            </fieldset>
-            <fieldset>
-                <legend>Enderezo da institución</legend>
-                <label> Provincia: </label><input type="text" required="true" >
-                <label> Localidade: </label><input type="text" required="true" >
-                <label> Enderezo: </label> <input type="text" required="true" >
-                <label> CP: </label> <input type="text" required="true" pattern="[0-9]{5} ">
-            </fieldset>
-            <fieldset>
-                <legend>Teléfono de contacto coa institución</legend>
-                <input type="text">
-            </fieldset>
-            <fieldset>
-                <legend>E-mail de contacto coa institución</legend>
-                <input type="text">
             </fieldset>
             <fieldset>
                 <legend>Data de inicio do Practicum</legend>
@@ -96,7 +67,7 @@
                 <input type="text" required="true" pattern="[0-9]{4}">
             </fieldset>
         </form>
-            <button type="submit" form="trabajosocial" value="Submit">Enviar</button>
+            <button type="submit" form="educacionsocial" value="Submit">Enviar</button>
         </section>
     </body>
 </html>
