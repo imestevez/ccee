@@ -17,39 +17,39 @@
         <section class="texto">
         <form action="" method="post" id="trabajosocial">          
             <fieldset>
-                <legend>Curso Académico</legend> 
-                <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4">/
+                <legend>Curso Académico <h7 class="asterisco">*</h7></legend> 
+                <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4"> / 
                 <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4">
             </fieldset>
             <fieldset>
-                <legend>Nome</legend>
-                <input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}">
+                <legend>Nome <h7 class="asterisco">*</h7></legend>
+                <input type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-z]{1,30}$">
             </fieldset>
             <fieldset>
-                <legend>Apelidos</legend>
-                <input type="text" required="true" size="50" maxlength="50" pattern="[A-Za-z]{50}">
+                <legend>Apelidos <h7 class="asterisco">*</h7></legend>
+                <input type="text" required="true" size="50" maxlength="50" pattern="^[A-Za-z]{1,50}$">
             </fieldset>
             <fieldset>
-                <legend>NIF</legend>
-                <input type="text" required="true" pattern="[0-9]{8}[A-Za-z]{1}" size="9" maxlength="9">
+                <legend>NIF <h7 class="asterisco">*</h7></legend>
+                <input type="text" required="true" pattern="^[0-9]{8}[A-Za-z]{1}$" size="9" maxlength="9">
             </fieldset>
             <fieldset>
-                <legend>Enderezo</legend>
-                <label> Provincia </label><input type="text" required="true"  size="30" maxlength="30" pattern="[A-Za-z]{30}"> 
-                <label> Localidade </label><input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}"> 
-                <label> Enderezo </label><input type="text" required="true" size="50" maxlength="50"> 
-                <label> CP </label><input type="text" required="true" pattern="[0-9]{5}" size="5" maxlength="5">
+                <legend>Enderezo <h7 class="asterisco">*</h7></legend>
+                <label> Provincia: </label><input type="text" required="true"  size="30" maxlength="30" pattern="^[A-Za-z]{1,30}$"> 
+                <label> Localidade: </label><input type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-z]{1,30}$"> <br><br>
+                <label> Dirección: </label><input type="text" required="true" size="50" maxlength="50"> 
+                <label> CP: </label><input type="text" required="true" pattern="^[0-9]{5}$" size="5" maxlength="5">
             </fieldset>
             <fieldset>
                 <legend>Teléfono de contacto</legend>
-                <input type="text" pattern="[0-9]{9}" size="9" maxlength="9">
+                <input type="text" pattern="^[0-9]{9}$" size="9" maxlength="9">
             </fieldset>
             <fieldset>
                 <legend>E-mail</legend>
-                <input type="text" required="true" size="50" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                <input type="text" required="true" size="50" maxlength="50" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
             </fieldset>
             <fieldset>
-                <legend>Titor/a Académico</legend>
+                <legend>Titor/a Académico <h7 class="asterisco">*</h7></legend>
                 <label>Elixe desta lista o nome do teu titor/a da Facultade</label><br>
                 <select>
                   <option value="Pepe">Pepe</option>
@@ -62,45 +62,47 @@
                 <legend>Horas titorizadas</legend>
                 <label>No caso de ter mais de un tutor, debes indicar cantas horas titorizou cada un.
                 Por exemplo José Pérez Pérez 250h</label> <br>
-                <textarea rows="10" cols="60"  maxlength="60" ></textarea>
+                <textarea rows="5" cols="60"  maxlength="60" ></textarea>
             </fieldset>
             <fieldset>
-                <legend>Nome da institución</legend>
+                <legend>Nome da institución <h7 class="asterisco">*</h7></legend>
                 <input type="text" required="true" size="30" maxlength="30" >
             </fieldset>
             <fieldset>
-                <legend>CIF ou NIF da empresa</legend>
+                <legend>CIF ou NIF da empresa <h7 class="asterisco">*</h7></legend>
                 <input type="text" required="true" size="30" maxlength="30">
             </fieldset>
             <fieldset>
-                <legend>Enderezo da institución</legend>
-                <label> Provincia: </label><input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}" >
-                <label> Localidade: </label><input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}">
-                <label> Enderezo: </label> <input type="text" required="true" size="50" maxlength="50" >
+                <legend>Enderezo da institución <h7 class="asterisco">*</h7></legend>
+                <label> Provincia: </label><input type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-z]{1,30}$" >
+                <label> Localidade: </label><input type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-z]{1,30}$"><br><br>
+                <label> Dirección: </label> <input type="text" required="true" size="50" maxlength="50" >
                 <label> CP: </label> <input type="text" required="true" pattern="[0-9]{5}" size="5" maxlength="5">
             </fieldset>
             <fieldset>
                 <legend>Teléfono de contacto coa institución</legend>
-                <input type="text" size="9" maxlength="9" pattern="[0-9]{9}">
+                <input type="text" size="9" maxlength="9" pattern="^[0-9]{9}$">
             </fieldset>
             <fieldset>
                 <legend>E-mail de contacto coa institución</legend>
-                <input type="text" size="50" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                <input type="text" size="50" maxlength="50" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
             </fieldset>
             <fieldset>
-                <legend>Data de inicio do Practicum</legend>
+                <legend>Data de inicio do Practicum <h7 class="asterisco">*</h7></legend>
                 <input type="date" required="true">
             </fieldset>
             <fieldset>
-                <legend>Data de finalización do Practicum</legend>
+                <legend>Data de finalización do Practicum <h7 class="asterisco">*</h7></legend>
                 <input type="date" required="true">
             </fieldset>
             <fieldset>
-                <legend>Horas totais do Practicum</legend>
-                <input type="text" required="true" pattern="[0-9]{4}" size="5" maxlength="5" >
+                <legend>Horas totais do Practicum <h7 class="asterisco">*</h7></legend>
+                <input type="text" required="true" pattern="^[0-9]{1,4}$" size="5" maxlength="5" >
             </fieldset>
             <button type="submit" form="trabajosocial" value="Submit">Enviar</button>
+            <button type="reset"  form="trabajosocial" value="Reset">Reestablecer</button>
         </form>
+
         </section>
     </body>
 </html>

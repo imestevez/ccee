@@ -6,16 +6,19 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Prácticum</title>
         <meta name="description" content="Una guía interactiva de primeros pasos para Brackets.">
-        <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="./style/style.css">
     </head>
     <body>
+        <section class="titulo">
         <h1>PRACTICUM DE GRAO</h1>
         <H4>Elixe o teu grao</H4>
+        </section>
         <section class="texto">
         <form action="Controllers/indexController.php" method="post" id="trabajosocial"> 
             <fieldset>
                 <legend>Graos</legend>
                 <select name="selectTitulo">
+                  <option value="none" selected="true">--Elixa Opción</option>
                   <option value="trabajosocial">Traballo Social</option>
                   <option value="educacionsocial">Educacion Social</option>
                   <option value="infantil">Educación Infantil</option>

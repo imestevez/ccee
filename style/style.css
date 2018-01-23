@@ -1,14 +1,11 @@
 label{
 	color: #088A85;
 }
-h6{
-	color: red;
-	font-size: 14px;
-}
 
 fieldset{
 	border: 0px solid white;
 	border-style: none;
+	margin-top: 1.5%;
 }
 
 legend{
@@ -18,15 +15,48 @@ legend{
 }
 
 .texto{
-	color: blue;
+	color: black;
+	margin-left: 5%;
 }
 .titulo{
 	margin: 2.5%;
 	color: #088A85;
+	margin-left: 5%;
+
 }
+
 h4{
 	color: #424242;
+	font-weight: bold;
+
 }
 h5{
 	color: #424242;
+	font-weight: bold;
+}
+h1{
+	font-size: 20px;
+	font-weight: bold;
+
+}
+h6{
+	color: red;
+	font-size: 14px;
+	font-weight: bold;
+
+}
+
+.asterisco{
+	color: red;
+	font-weight: bold;
+
+}
+
+*{
+    font: 16px sans-serif;
+
+}
+button{
+	margin-left: 1.5%;
+
 }
