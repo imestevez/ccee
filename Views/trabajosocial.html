@@ -16,7 +16,7 @@
             <h6>*Campo Obligatorio</h6>
         </section>
         <section class="texto">
-        <form action="" method="post" id="trabajosocial">          
+        <form action="" method="post" name="trabajosocial" id="trabajosocial">          
             <fieldset>
                 <legend>Curso Académico <h7 class="asterisco">*</h7></legend> 
                 <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4"> / 
@@ -24,20 +24,20 @@
             </fieldset>
             <fieldset>
                 <legend>Nome <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-z]{1,30}$">
+                <input type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-zñÑçÇ\s]{1,30}$">
             </fieldset>
             <fieldset>
                 <legend>Apelidos <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" size="50" maxlength="50" pattern="^[A-Za-z]{1,50}$">
+                <input type="text" required="true" size="50" maxlength="50" pattern="^[A-Za-zñÑçÇ\s]{1,50}$">
             </fieldset>
             <fieldset>
                 <legend>NIF <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" pattern="^[0-9]{8}[A-Za-z]{1}$" size="9" maxlength="9" onclick="validarDni(this)">
+                <input type="text" required="true" name="dni" pattern="^[0-9]{8}[A-Za-z]{1}$" size="9" maxlength="9" onblur=" validarDni(this)"><p id="dni" style="color: red"></p>
             </fieldset>
             <fieldset>
                 <legend>Enderezo <h7 class="asterisco">*</h7></legend>
-                <label> Provincia: </label><input type="text" required="true"  size="30" maxlength="30" pattern="^[A-Za-z]{1,30}$"> 
-                <label> Localidade: </label><input type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-z]{1,30}$"> <br><br>
+                <label> Provincia: </label><input type="text" required="true"  size="30" maxlength="30" pattern="^[A-Za-zñÑçÇ\s]{1,30}$"> 
+                <label> Localidade: </label><input type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-zñÑçÇ\s]{1,30}$"> <br><br>
                 <label> Dirección: </label><input type="text" required="true" size="50" maxlength="50"> 
                 <label> CP: </label><input type="text" required="true" pattern="^[0-9]{5}$" size="5" maxlength="5">
             </fieldset>
@@ -72,12 +72,12 @@
             </fieldset>
             <fieldset>
                 <legend>CIF ou NIF da empresa <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" size="30" maxlength="30">
+                <input type="text" required="true" size="9" maxlength="9">
             </fieldset>
             <fieldset>
                 <legend>Enderezo da institución <h7 class="asterisco">*</h7></legend>
-                <label> Provincia: </label><input type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-z]{1,30}$" >
-                <label> Localidade: </label><input type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-z]{1,30}$"><br><br>
+                <label> Provincia: </label><input type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-zñÑçÇ\s]{1,30}$" >
+                <label> Localidade: </label><input type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-zñÑçÇ\s]{1,30}$"><br><br>
                 <label> Dirección: </label> <input type="text" required="true" size="50" maxlength="50" >
                 <label> CP: </label> <input type="text" required="true" pattern="[0-9]{5}" size="5" maxlength="5">
             </fieldset>
@@ -102,10 +102,9 @@
                 <input type="text" required="true" pattern="^[0-9]{1,4}$" size="4" maxlength="4" >
             </fieldset>
             <input type="text" name="titulacion" style="visibility: hidden;" value="trabajosocial"><br>
-            <button type="submit" form="trabajosocial" value="Submit">Enviar</button>
+            <button type="submit" form="trabajosocial" value="Submit" onclick="validar('trabajosocial')">Enviar</button>
             <button type="reset"  form="trabajosocial" value="Reset">Reestablecer</button>
         </form>
-
         </section>
     </body>
 </html>
