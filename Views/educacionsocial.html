@@ -24,24 +24,24 @@
             </fieldset>
             <fieldset>
                 <legend>Curso Académico</legend>
-                <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4">/
-                <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4">
+                <input type="text" name="curso1"required="true" pattern="[0-9]{4}" size="4" maxlength="4">/
+                <input type="text" name="curso2" required="true" pattern="[0-9]{4}" size="4" maxlength="4">
             </fieldset>
             <fieldset>
                 <legend>Nome</legend>
-                <input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}">
+                <input type="text" name="nombre" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}">
             </fieldset>
             <fieldset>
                 <legend>Apelidos</legend>
-                <input type="text" required="true" size="50" maxlength="50" pattern="[A-Za-z]{50}">
+                <input type="text" name="apellidos" required="true" size="50" maxlength="50" pattern="[A-Za-z]{50}">
             </fieldset>
             <fieldset>
                 <legend>NIF</legend>
-                <input type="text" required="true" pattern="[0-9]{8}[A-Z]{1}" size="9" maxlength="9">
+                <input type="text" name="dni" required="true" pattern="[0-9]{8}[A-Z]{1}" size="9" maxlength="9">
             </fieldset>
             <fieldset>
                 <legend>Titor/a Académico</legend>
-                <select>
+                <select name="tutorA">
                   <option value="Pepe">Pepe</option>
                   <option value="Ana">Ana</option>
                   <option value="Juan">Juan</option>
@@ -50,25 +50,25 @@
             </fieldset>
             <fieldset>
                 <legend>Nome da institución</legend>
-                <input type="text" required="true">
+                <input name="nombreIns" type="text" required="true">
             </fieldset>
             <fieldset>
                 <legend>Titor/a externo</legend>
-                <input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}">
+                <input name="tutorE" type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}">
             </fieldset>
             <fieldset>
                 <legend>Data de inicio do Practicum</legend>
-                <input type="date" required="true">
+                <input name="fechaIni" type="date" required="true">
             </fieldset>
             <fieldset>
                 <legend>Data de finalización do Practicum</legend>
-                <input type="date" required="true">
+                <input name="fechaFin" type="date" required="true">
             </fieldset>
             <fieldset>
                 <legend>Horas totais do Practicum</legend>
-                <input type="text" required="true" pattern="[0-9]{4}">
+                <input name="horasPrac" type="text" required="true" pattern="[0-9]{4}">
             </fieldset>
-            <button type="submit" form="educacionsocial" value="Submit">Enviar</button>
+            <button id="submit" type="submit" form="educacionsocial" value="Submit">Enviar</button>
         </form>           
         </section>
     </body>
