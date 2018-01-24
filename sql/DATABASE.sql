@@ -51,7 +51,7 @@ CREATE TABLE `EDUCACION_SOCIAL` (
 	`nombre` VARCHAR(30) NOT NULL , 
 	`apellidos` VARCHAR(50) NOT NULL , 
 	`dni` VARCHAR(9) NOT NULL , 
-	`practicum` VARCHAR(2) NOT NULL , 
+	`practicum` INT(1) NOT NULL , 
 	`tutorA` VARCHAR(50) NOT NULL ,
 	`tutorE` VARCHAR(50) NOT NULL ,
 	`nombreIns` VARCHAR(30) NOT NULL ,  

@@ -15,15 +15,15 @@
             <h6>*Campo Obligatorio</h6>
         </section>
         <section class="texto">
-        <form action="" method="post" id="infantil">          
+        <form action="" method="post" id="infantil">   
             <fieldset>
-                <legend>Curso Académico</legend>
-                <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4"> / 
-                <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4">
+                <legend>Curso Académico <h7 class="asterisco">*</h7></legend>
+                <input name="fecha1" type="text" required="true" pattern="^[0-9]{4}" size="4" maxlength="4"> / 
+                <input name="fecha2" type="text" required="true" pattern="^[0-9]{4}" size="4" maxlength="4">
             </fieldset>
             <fieldset>
-                <legend>Mención</legend>
-                <select required="true">
+                <legend>Mención <h7 class="asterisco">*</h7></legend>
+                <select name="mencion" required="true">
                   <option value="" selected="true">--Elixa Opción</option>
                   <option value="educacionE">Educación Especial</option>
                   <option value="afondamentoC">Afondamento Curricular</option>
@@ -31,21 +31,21 @@
                 </select>
             </fieldset>
             <fieldset>
-                <legend>Nome</legend>
-                <input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}">
+                <legend>Nome <h7 class="asterisco">*</h7></legend>
+                <input name="nombre" type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-z]{1,30}">
             </fieldset>
             <fieldset>
-                <legend>Apelidos</legend>
-                <input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{50}">
+                <legend>Apelidos <h7 class="asterisco">*</h7></legend>
+                <input name="apellidos" type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-z]{1,50}">
             </fieldset>
             <fieldset>
-                <legend>NIF</legend>
-                <input type="text" required="true" pattern="[0-9]{8}[A-Z]{1}" size="9" maxlength="9">
+                <legend>NIF <h7 class="asterisco">*</h7></legend>
+                <input name="dni" type="text" required="true" pattern="^[0-9]{8}[A-Z]{1}$" size="9" maxlength="9">
             </fieldset>
             <fieldset>
-                <legend>Titor/a Académico</legend>
+                <legend>Titor/a Académico <h7 class="asterisco">*</h7></legend>
                 <label>Elixe desta lista o nome do teu titor/a da Facultade</label><br>
-                <select required="true">
+                <select name="tutorA" required="true">
                   <option value="" selected="true">--Elixa Opción</option>
                   <option value="Pepe">Pepe</option>
                   <option value="Ana">Ana</option>
@@ -54,33 +54,33 @@
                 </select>
             </fieldset>
             <fieldset>
-                <legend>Nome da institución</legend>
-                <input type="text" required="true" size="30" maxlength="30" >
+                <legend>Nome da institución <h7 class="asterisco">*</h7></legend>
+                <input name="nombreIns" type="text"  required="true" size="30" maxlength="30" >
             </fieldset>
             <fieldset>
-                <legend>CIF ou NIF da empresa</legend>
-                <input type="text" required="true" size="9" maxlength="9">
+                <legend>CIF ou NIF da empresa <h7 class="asterisco">*</h7></legend>
+                <input name="cif" type="text" required="true" pattern="[A-Za-z0-9]{9}" size="9" maxlength="9">
             </fieldset>
             <fieldset>
-                <legend>Enderezo da institución</legend>
-                <label> Provincia: </label><input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}" >
-                <label> Localidade: </label><input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}" ><br><br>
-                <label> Enderezo: </label> <input type="text" required="true" size="50" maxlength="50" >
-                <label> CP: </label> <input type="text" required="true" pattern="[0-9]{5}" size="5" maxlength="5">
+                <legend>Enderezo da institución <h7 class="asterisco">*</h7></legend>
+                <label> Provincia: </label><input name="provinciaIns" type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{1,30}" >
+                <label> Localidade: </label><input name="localidadIns" type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{1,30}" ><br><br>
+                <label> Enderezo: </label> <input name="direccionIns" type="text" required="true" size="50" maxlength="50"  >
+                <label> CP: </label> <input name="  `cpIns` INT(5) NOT NULL ,
+" type="text" required="true" pattern="[0-9]{5}" size="5" maxlength="5">
             </fieldset>
             <fieldset>
-                <legend>Data de inicio do Practicum</legend>
-                <input type="date" required="true">
+                <legend>Data de inicio do Practicum <h7 class="asterisco">*</h7></legend>
+                <input name="fechaIni" type="date" required="true">
             </fieldset>
             <fieldset>
-                <legend>Data de finalización do Practicum</legend>
-                <input type="date" required="true">
+                <legend>Data de finalización do Practicum <h7 class="asterisco">*</h7></legend>
+                <input name="fechaFin" type="date" required="true">
             </fieldset>
             <input type="text" name="titulacion" style="visibility: hidden;" value="infantil"><br>
 
-            <button type="submit" form="infantil" value="Submit">Enviar</button>
-            <button type="reset"  form="infantil" value="Reset">Reestablecer</button>
-            
+            <button id="submit" type="submit" form="infantil" value="Submit">Enviar</button>
+            <button id="submit" type="reset"  form="infantil" value="Reset">Reestablecer</button>          
         </form>
         </section>
     </body>
