@@ -23,7 +23,8 @@
             </fieldset>
             <fieldset>
                 <legend>Mención</legend>
-                <select>
+                <select required="true">
+                  <option value="" selected="true">--Elixa Opción</option>
                   <option value="educacionE">Educación Especial</option>
                   <option value="afondamentoC">Afondamento Curricular</option>
                   <option value="linguaE">Lingua Estranxeiras</option>
@@ -44,7 +45,8 @@
             <fieldset>
                 <legend>Titor/a Académico</legend>
                 <label>Elixe desta lista o nome do teu titor/a da Facultade</label><br>
-                <select>
+                <select required="true">
+                  <option value="" selected="true">--Elixa Opción</option>
                   <option value="Pepe">Pepe</option>
                   <option value="Ana">Ana</option>
                   <option value="Juan">Juan</option>
@@ -74,6 +76,8 @@
                 <legend>Data de finalización do Practicum</legend>
                 <input type="date" required="true">
             </fieldset>
+            <input type="text" name="titulacion" style="visibility: hidden;" value="primaria"><br>
+
             <button type="submit" form="primaria" value="Submit">Enviar</button>
             <button type="reset"  form="primaria" value="Reset">Reestablecer</button>
             

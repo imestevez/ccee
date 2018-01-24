@@ -6,6 +6,7 @@
         <title>Traballo Social</title>
         <meta name="description" >
         <link rel="stylesheet" href="../style/style.css">
+        <script type="text/javascript" src="../js/validaciones.js"></script>
     </head>
     <body>
         <section class="titulo">
@@ -31,7 +32,7 @@
             </fieldset>
             <fieldset>
                 <legend>NIF <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" pattern="^[0-9]{8}[A-Za-z]{1}$" size="9" maxlength="9">
+                <input type="text" required="true" pattern="^[0-9]{8}[A-Za-z]{1}$" size="9" maxlength="9" onclick="validarDni(this)">
             </fieldset>
             <fieldset>
                 <legend>Enderezo <h7 class="asterisco">*</h7></legend>
@@ -51,7 +52,8 @@
             <fieldset>
                 <legend>Titor/a Académico <h7 class="asterisco">*</h7></legend>
                 <label>Elixe desta lista o nome do teu titor/a da Facultade</label><br>
-                <select>
+                <select required="true">
+                  <option value="" selected="true">--Elixa Opción</option>
                   <option value="Pepe">Pepe</option>
                   <option value="Ana">Ana</option>
                   <option value="Juan">Juan</option>

@@ -24,24 +24,25 @@
             </fieldset>
             <fieldset>
                 <legend>Curso Académico <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4"> / 
-                <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4">
+                <input type="text" required="true" pattern="^[0-9]{4}" size="4" maxlength="4"> / 
+                <input type="text" required="true" pattern="^[0-9]{4}" size="4" maxlength="4">
             </fieldset>
             <fieldset>
                 <legend>Nome <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}">
+                <input type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-z]{1,30}">
             </fieldset>
             <fieldset>
                 <legend>Apelidos <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" size="50" maxlength="50" pattern="[A-Za-z]{50}">
+                <input type="text" required="true" size="50" maxlength="50" pattern="^[A-Za-z]{1,50}">
             </fieldset>
             <fieldset>
                 <legend>NIF <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" pattern="[0-9]{8}[A-Z]{1}" size="9" maxlength="9">
+                <input type="text" required="true" pattern="^[0-9]{8}[A-Z]{1}$" size="9" maxlength="9">
             </fieldset>
             <fieldset>
                 <legend>Titor/a Académico <h7 class="asterisco">*</h7></legend>
-                <select>
+                <select required="true">
+                  <option value="" selected="true">--Elixa Opción</option>
                   <option value="Pepe">Pepe</option>
                   <option value="Ana">Ana</option>
                   <option value="Juan">Juan</option>
@@ -54,7 +55,7 @@
             </fieldset>
             <fieldset>
                 <legend>Titor/a externo <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}">
+                <input type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-z]{1,30}">
             </fieldset>
             <fieldset>
                 <legend>Data de inicio do Practicum <h7 class="asterisco">*</h7></legend>
@@ -66,8 +67,10 @@
             </fieldset>
             <fieldset>
                 <legend>Horas totais do Practicum <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" pattern="[0-9]{4}"  size="4" maxlength="4">
+                <input type="text" required="true" pattern="^[0-9]{4}"  size="4" maxlength="4">
             </fieldset>
+            <input type="text" name="titulacion" style="visibility: hidden;" value="educacionsocial"><br>
+            
             <button type="submit" form="educacionsocial" value="Submit">Enviar</button>
             <button type="reset"  form="educacionsocial" value="Reset">Reestablecer</button>
 
