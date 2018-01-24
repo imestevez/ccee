@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,44 +22,25 @@
                 <input type="radio" name="practicum" value="2">Prácticum II<br>
             </fieldset>
             <fieldset>
-                <legend>Curso Académico</legend>
-                <input type="text" name="curso1"required="true" pattern="[0-9]{4}" size="4" maxlength="4">/
-                <input type="text" name="curso2" required="true" pattern="[0-9]{4}" size="4" maxlength="4">
-            </fieldset>
-            <fieldset>
-                <legend>Nome</legend>
-                <input type="text" name="nombre" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}">
-            </fieldset>
-            <fieldset>
-                <legend>Apelidos</legend>
-                <input type="text" name="apellidos" required="true" size="50" maxlength="50" pattern="[A-Za-z]{50}">
-            </fieldset>
-            <fieldset>
-                <legend>NIF</legend>
-                <input type="text" name="dni" required="true" pattern="[0-9]{8}[A-Z]{1}" size="9" maxlength="9">
-            </fieldset>
-            <fieldset>
-                <legend>Titor/a Académico</legend>
-                <select name="tutorA">
                 <legend>Curso Académico <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" pattern="^[0-9]{4}" size="4" maxlength="4"> / 
-                <input type="text" required="true" pattern="^[0-9]{4}" size="4" maxlength="4">
+                <input name="fecha1" type="text" required="true" pattern="^[0-9]{4}" size="4" maxlength="4"> / 
+                <input name="fecha2" type="text" required="true" pattern="^[0-9]{4}" size="4" maxlength="4">
             </fieldset>
             <fieldset>
                 <legend>Nome <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-z]{1,30}">
+                <input name="nombre" type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-z]{1,30}">
             </fieldset>
             <fieldset>
                 <legend>Apelidos <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" size="50" maxlength="50" pattern="^[A-Za-z]{1,50}">
+                <input name="apellidos" type="text" required="true" size="50" maxlength="50" pattern="^[A-Za-z]{1,50}">
             </fieldset>
             <fieldset>
                 <legend>NIF <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" pattern="^[0-9]{8}[A-Z]{1}$" size="9" maxlength="9">
+                <input name="dni" type="text" required="true" pattern="^[0-9]{8}[A-Z]{1}$" size="9" maxlength="9">
             </fieldset>
             <fieldset>
                 <legend>Titor/a Académico <h7 class="asterisco">*</h7></legend>
-                <select required="true">
+                <select name="tutorA" required="true">
                   <option value="" selected="true">--Elixa Opción</option>
                   <option value="Pepe">Pepe</option>
                   <option value="Ana">Ana</option>
@@ -69,47 +49,27 @@
                 </select>
             </fieldset>
             <fieldset>
-                <legend>Nome da institución</legend>
-                <input name="nombreIns" type="text" required="true">
-            </fieldset>
-            <fieldset>
-                <legend>Titor/a externo</legend>
-                <input name="tutorE" type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}">
-            </fieldset>
-            <fieldset>
-                <legend>Data de inicio do Practicum</legend>
-                <input name="fechaIni" type="date" required="true">
-            </fieldset>
-            <fieldset>
-                <legend>Data de finalización do Practicum</legend>
-                <input name="fechaFin" type="date" required="true">
-            </fieldset>
-            <fieldset>
-                <legend>Horas totais do Practicum</legend>
-                <input name="horasPrac" type="text" required="true" pattern="[0-9]{4}">
-            </fieldset>
-            <button id="submit" type="submit" form="educacionsocial" value="Submit">Enviar</button>
                 <legend>Nome da institución <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true">
+                <input name="nombreIns"  type="text" required="true"  size="30" maxlength="30">
             </fieldset>
             <fieldset>
                 <legend>Titor/a externo <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-z]{1,30}">
+                <input name="tutorE" type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-z]{1,30}">
             </fieldset>
             <fieldset>
                 <legend>Data de inicio do Practicum <h7 class="asterisco">*</h7></legend>
-                <input type="date" required="true">
+                <input name="fechaIni" type="date" required="true">
             </fieldset>
             <fieldset>
                 <legend>Data de finalización do Practicum <h7 class="asterisco">*</h7></legend>
-                <input type="date" required="true">
+                <input name="fechaFin" type="date" required="true">
             </fieldset>
             <fieldset>
                 <legend>Horas totais do Practicum <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" pattern="^[0-9]{4}"  size="4" maxlength="4">
+                <input name="horasPrac" type="text" required="true" pattern="^[0-9]{4}"  size="4" maxlength="4">
             </fieldset>
             <input type="text" name="titulacion" style="visibility: hidden;" value="educacionsocial"><br>
-            
+
             <button type="submit" form="educacionsocial" value="Submit">Enviar</button>
             <button type="reset"  form="educacionsocial" value="Reset">Reestablecer</button>
         </form>           

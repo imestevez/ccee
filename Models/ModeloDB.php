@@ -39,8 +39,8 @@ class MODELO_DB{
 	function ADD_TS(){
 
 			$sql = "INSERT INTO TRABAJO_SOCIAL VALUES(
-												`titulacion` = '$this->lista['']',
-												`nombre` = '$this->lista['']' , 
+												`titulacion` = '$this->titulacion',
+												`nombre` = '$this->lista['nombre']' , 
 												`apellidos` = '$this->lista['']', 
 												`dni` = '$this->lista['']', 
 												`provincia` = '$this->lista['']' , 
@@ -54,16 +54,14 @@ class MODELO_DB{
 												`nombreIns` = '$this->lista['']', 
 												`cif` = '$this->lista['']', 
 												`provinciaIns` = '$this->lista['']', 
-												`localidadIns` = '$this->lista['']'VARCHAR(30) NOT NULL , 
-												`direccionIns` = '$this->lista['']' VARCHAR(50) NOT NULL , 
-												`cpIns` = '$this->lista['']' INT(5) NOT NULL ,
-												`telefonoIns` = '$this->lista['']' INT(9) NULL , 
-												`emailIns` = '$this->lista['']' VARCHAR(50) NULL , 
-												`fechaIni` = '$this->lista['']' DATE NOT NULL , 
-												`fechaFin` = '$this->lista['']' DATE NOT NULL , 
-												`horasPrac` = '$this->lista['']' FLOAT(4,2) NOT NULL ) ENGINE = InnoDB;
-
-		)";
+												`localidadIns` = '$this->lista['']', 
+												`direccionIns` = '$this->lista['']', 
+												`cpIns` = '$this->lista['']',
+												`telefonoIns` = '$this->lista['']', 
+												`emailIns` = '$this->lista['']', 
+												`fechaIni` = '$this->lista['']', 
+												`fechaFin` = '$this->lista['']', 
+												`horasPrac` = '$this->lista['']')";
 	}
 
 	function ADD_ES(){
@@ -80,8 +78,5 @@ class MODELO_DB{
 
 
 }
-
-
-
 
 ?>
