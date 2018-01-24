@@ -17,8 +17,8 @@
         <form action="Controllers/indexController.php" method="post" id="trabajosocial"> 
             <fieldset>
                 <legend>Graos</legend>
-                <select name="selectTitulo">
-                  <option value="none" selected="true">--Elixa Opción</option>
+                <select name="selectTitulo" required="true" >
+                  <option value="" selected="true">--Elixa Opción</option>
                   <option value="trabajosocial">Traballo Social</option>
                   <option value="educacionsocial">Educacion Social</option>
                   <option value="infantil">Educación Infantil</option>

@@ -12,18 +12,19 @@
             <h1>PRACTICUM DE GRAO</h1>
             <H4>DATOS PARA A DOCUMENTACIÓN DO PRACTICUM</H4>
             <H5>Documento D8 da normativa vixente das Prácticas Externas Curriculares</H5>
-            <h5>*Campo Obligatorio</h5>
+            <h6>*Campo Obligatorio</h6>
         </section>
         <section class="texto">
         <form action="" method="post" id="infantil">          
             <fieldset>
                 <legend>Curso Académico</legend>
-                <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4">/
+                <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4"> / 
                 <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4">
             </fieldset>
             <fieldset>
                 <legend>Mención</legend>
-                <select>
+                <select required="true">
+                  <option value="" selected="true">--Elixa Opción</option>
                   <option value="educacionE">Educación Especial</option>
                   <option value="afondamentoC">Afondamento Curricular</option>
                   <option value="linguaE">Lingua Estranxeiras</option>
@@ -44,7 +45,8 @@
             <fieldset>
                 <legend>Titor/a Académico</legend>
                 <label>Elixe desta lista o nome do teu titor/a da Facultade</label><br>
-                <select>
+                <select required="true">
+                  <option value="" selected="true">--Elixa Opción</option>
                   <option value="Pepe">Pepe</option>
                   <option value="Ana">Ana</option>
                   <option value="Juan">Juan</option>
@@ -62,7 +64,7 @@
             <fieldset>
                 <legend>Enderezo da institución</legend>
                 <label> Provincia: </label><input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}" >
-                <label> Localidade: </label><input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}" >
+                <label> Localidade: </label><input type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{30}" ><br><br>
                 <label> Enderezo: </label> <input type="text" required="true" size="50" maxlength="50" >
                 <label> CP: </label> <input type="text" required="true" pattern="[0-9]{5}" size="5" maxlength="5">
             </fieldset>
@@ -74,7 +76,11 @@
                 <legend>Data de finalización do Practicum</legend>
                 <input type="date" required="true">
             </fieldset>
+            <input type="text" name="titulacion" style="visibility: hidden;" value="infantil"><br>
+
             <button type="submit" form="infantil" value="Submit">Enviar</button>
+            <button type="reset"  form="infantil" value="Reset">Reestablecer</button>
+            
         </form>
         </section>
     </body>
