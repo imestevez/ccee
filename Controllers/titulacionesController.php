@@ -35,11 +35,11 @@ $cursoAcademico = null;
 	if(isset($_REQUEST['titulacion'])){
 		$titulacion = $_REQUEST['titulacion'];
 	}
-	if((isset($_REQUEST['curso1'])) && (isset($_REQUEST['curso2']))){
-		$curso1 = $_REQUEST['curso1'];
-		$curso2 = $_REQUEST['curso2'];
+	if((isset($_REQUEST['fecha1'])) && (isset($_REQUEST['fecha2']))){
+		$fecha1 = $_REQUEST['fecha1'];
+		$fecha2 = $_REQUEST['fecha2'];
 
-		$cursoAcademico = $curso1."/".$curso2;
+		$cursoAcademico = $fecha1."/".$fecha2;
 	}
 
 	if(isset($_REQUEST['nombre'])){
@@ -179,6 +179,12 @@ function get_data_from_ES(){
 	if(isset($_REQUEST['titulacion'])){
 			$titulacion = $_REQUEST['titulacion'];
 	}
+	if((isset($_REQUEST['fecha1'])) && (isset($_REQUEST['fecha2']))){
+		$fecha1 = $_REQUEST['fecha1'];
+		$fecha2 = $_REQUEST['fecha2'];
+
+		$cursoAcademico = $fecha1."/".$fecha2;
+	}
 	if(isset($_REQUEST['nombre'])){
 			$titulacion = $_REQUEST['nombre'];
 	}
@@ -251,8 +257,14 @@ function get_data_from_EI(){
 	//$horasPrac = null;
 	$cursoAcademico = null;
 
-if(isset($_REQUEST['titulacion'])){
+	if(isset($_REQUEST['titulacion'])){
 		$titulacion = $_REQUEST['titulacion'];
+	}
+	if((isset($_REQUEST['fecha1'])) && (isset($_REQUEST['fecha2']))){
+		$fecha1 = $_REQUEST['fecha1'];
+		$fecha2 = $_REQUEST['fecha2'];
+
+		$cursoAcademico = $fecha1."/".$fecha2;
 	}
 	if(isset($_REQUEST['nombre'])){
 		$nombre = $_REQUEST['nombre'];
@@ -367,8 +379,14 @@ $titulacion = null;
 	//$horasPrac = null;
 	$cursoAcademico = null;
 
-if(isset($_REQUEST['titulacion'])){
+	if(isset($_REQUEST['titulacion'])){
 		$titulacion = $_REQUEST['titulacion'];
+	}
+	if((isset($_REQUEST['fecha1'])) && (isset($_REQUEST['fecha2']))){
+		$fecha1 = $_REQUEST['fecha1'];
+		$fecha2 = $_REQUEST['fecha2'];
+
+		$cursoAcademico = $fecha1."/".$fecha2;
 	}
 	if(isset($_REQUEST['nombre'])){
 		$nombre = $_REQUEST['nombre'];
