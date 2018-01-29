@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Traballo Social</title>
         <meta name="description" >
@@ -16,11 +16,11 @@
             <h6>*Campo Obligatorio</h6>
         </section>
         <section class="texto">
-        <form action="../Controllers/titulacionesController.php" method="post" name="trabajosocial" id="trabajosocial">          
+        <form action="../Controllers/titulacionesController.php" method="post" name="trabajosocial" id="trabajosocial" accept="utf8_general_ci" >          
             <fieldset>
                 <legend>Curso Académico <h7 class="asterisco">*</h7></legend> 
-                <input name="curso1" type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4"> / 
-                <input name="curso2" type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4">
+                <input name="fecha1" type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4"> / 
+                <input name="fecha2" type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4">
             </fieldset>
             <fieldset>
                 <legend>Nome <h7 class="asterisco">*</h7></legend>
@@ -36,8 +36,8 @@
             </fieldset>
             <fieldset>
                 <legend>Enderezo <h7 class="asterisco">*</h7></legend>
-                <label> Provincia: </label><input name="provincia" type="text" required="true"  size="30" maxlength="30" pattern="^[A-Za-zñÑçÇ\s]{1,30}$"> 
-                <label> Localidade: </label><input name="localidad" type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-zñÑçÇ\s]{1,30}$"> <br><br>
+                <label> Provincia: </label><input name="provincia" type="text" required="true"  size="30" maxlength="30" pattern="^[A-Za-zñÑçÇáéíóúÁÉÍÓÚ\s]{1,30}$"> 
+                <label> Localidade: </label><input name="localidad" type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-zñÑçÇáéíóúÁÉÍÓÚ\s]{1,30}$"> <br><br>
                 <label> Dirección: </label><input name="direccion" type="text" required="true" size="50" maxlength="50"> 
                 <label> CP: </label><input name="cp" type="text" required="true" pattern="^[0-9]{5}$" size="5" maxlength="5">
             </fieldset>
@@ -76,8 +76,8 @@
             </fieldset>
             <fieldset>
                 <legend>Enderezo da institución <h7 class="asterisco">*</h7></legend>
-                <label> Provincia: </label><input name="provinciaIns" type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-zñÑçÇ\s]{1,30}$" >
-                <label> Localidade: </label><input name="localidadIns" type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-zñÑçÇ\s]{1,30}$"><br><br>
+                <label> Provincia: </label><input name="provinciaIns" type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-zñÑçÇáéíóúÁÉÍÓÚ\s]{1,30}$" >
+                <label> Localidade: </label><input name="localidadIns" type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-zñÑçÇáéíóúÁÉÍÓÚ\s]{1,30}$"><br><br>
                 <label> Dirección: </label> <input name="direccionIns" type="text" required="true" size="50" maxlength="50" >
                 <label> CP: </label> <input name="cpIns" type="text" required="true" pattern="[0-9]{5}" size="5" maxlength="5">
             </fieldset>
