@@ -32,11 +32,11 @@
             </fieldset>
             <fieldset>
                 <legend>Nome <h7 class="asterisco">*</h7></legend>
-                <input name="nombre" type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-z]{1,30}">
+                <input name="nombre" type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-zñÑçÇáéíóúÁÉÍÓÚ\s]{1,30}">
             </fieldset>
             <fieldset>
                 <legend>Apelidos <h7 class="asterisco">*</h7></legend>
-                <input name="apellidos" type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-z]{1,50}">
+                <input name="apellidos" type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-zñÑçÇáéíóúÁÉÍÓÚ\s]{1,50}">
             </fieldset>
             <fieldset>
                 <legend>NIF <h7 class="asterisco">*</h7></legend>
@@ -63,11 +63,10 @@
             </fieldset>
             <fieldset>
                 <legend>Enderezo da institución <h7 class="asterisco">*</h7></legend>
-                <label> Provincia: </label><input name="provinciaIns" type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{1,30}" >
-                <label> Localidade: </label><input name="localidadIns" type="text" required="true" size="30" maxlength="30" pattern="[A-Za-z]{1,30}" ><br><br>
+                <label> Provincia: </label><input name="provinciaIns" type="text" required="true" size="30" maxlength="30" pattern="[A-Za-zñÑçÇáéíóúÁÉÍÓÚ\s]{1,30}" >
+                <label> Localidade: </label><input name="localidadIns" type="text" required="true" size="30" maxlength="30" pattern="[A-Za-zñÑçÇáéíóúÁÉÍÓÚ\s]{1,30}" ><br><br>
                 <label> Enderezo: </label> <input name="direccionIns" type="text" required="true" size="50" maxlength="50"  >
-                <label> CP: </label> <input name="  `cpIns` INT(5) NOT NULL ,
-" type="text" required="true" pattern="[0-9]{5}" size="5" maxlength="5">
+                <label> CP: </label> <input name="cpIns" type="text" required="true" pattern="[0-9]{5}" size="5" maxlength="5">
             </fieldset>
             <fieldset>
                 <legend>Data de inicio do Practicum <h7 class="asterisco">*</h7></legend>
