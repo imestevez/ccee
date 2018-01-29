@@ -40,7 +40,6 @@ class MODELO_DB{
 
 	function ADD_TS(){
 		$dni = $this->lista['dni'];
-
 		$sql = "SELECT dni FROM TRABAJO_SOCIAL WHERE (dni = '$dni')";
 		$result = $this->mysqli->query($sql);
 		$num_rows = mysqli_num_rows($result); 
@@ -122,7 +121,7 @@ class MODELO_DB{
 									'$horasPrac')";
 
 						$result = $this->mysqli->query($sql);
-						echo $sql;
+						//echo $sql;
 		}
 
 
@@ -130,14 +129,184 @@ class MODELO_DB{
 	}
 
 	function ADD_ES(){
+		$dni = $this->lista['dni'];
+		$sql = "SELECT dni FROM EDUCACION_SOCIAL WHERE (dni = '$dni')";
+		$result = $this->mysqli->query($sql);
+		$num_rows = mysqli_num_rows($result); 
+		if($num_rows > 0){
+			echo "DNI duplicado";
+		}else{
+
+			$cursoAcademico = $this->lista['cursoAcademico'];
+			$nombre = $this->lista['nombre'];
+			$apellidos = $this->lista['apellidos'];
+			$tutorA = $this->lista['tutorA'];
+			$tutorE = $this->lista['tutorE'];
+			$nombreIns = $this->lista['nombreIns'];
+			$fechaIni = $this->lista['fechaIni'];
+			$fechaFin = $this->lista['fechaFin'];
+			$horasPrac = $this->lista['horasPrac'];
+
+				$sql = "INSERT INTO EDUCACION_SOCIAL (
+						titulacion,
+						cursoAcademico,
+						nombre,
+						apellidos,
+						dni,
+						practicum,
+						tutorA,
+						tutorE,
+						horasT,
+						nombreIns,
+						fechaIni,
+						fechaFin,
+						horasPrac ) VALUES(
+									'$this->titulacion',
+									'$cursoAcademico',
+									'$nombre' , 
+									'$apellidos', 
+									'$dni', 
+									'$tutorA',
+									'$tutorE', 
+									'$nombreIns',
+									'$fechaIni', 
+									'$fechaFin', 
+									'$horasPrac')";
+
+						$result = $this->mysqli->query($sql);
+						//echo $sql;
+		}
 
 	}
 
 	function ADD_EI(){
+		$dni = $this->lista['dni'];
+		$sql = "SELECT dni FROM EDUCACION_INFANTIL WHERE (dni = '$dni')";
+		$result = $this->mysqli->query($sql);
+		$num_rows = mysqli_num_rows($result); 
+		if($num_rows > 0){
+			echo "DNI duplicado";
+		}else{
+
+			$cursoAcademico = $this->lista['cursoAcademico'];
+			$nombre = $this->lista['nombre'];
+			$apellidos = $this->lista['apellidos'];
+			$mencion = $this->lista['mencion'];
+			$tutorA = $this->lista['tutorA'];
+			$tutorE = $this->lista['tutorE'];
+			$nombreIns = $this->lista['nombreIns'];
+			$cif = $this->lista['cif'];
+			$provinciaIns = $this->lista['provinciaIns'];
+			$localidadIns = $this->lista['localidadIns'];
+			$direccionIns = $this->lista['direccionIns'];
+			$cpIns = $this->lista['cpIns'];
+			$emailIns = $this->lista['emailIns'];
+			$fechaIni = $this->lista['fechaIni'];
+			$fechaFin = $this->lista['fechaFin'];
+			//$horasPrac = $this->lista['horasPrac'];
+
+				$sql = "INSERT INTO EDUCACION_INFANTIL (
+						titulacion,
+						cursoAcademico,
+						nombre,
+						apellidos,
+						dni,
+						mencion,
+						tutorA,
+						tutorE,
+						nombreIns,
+						cif,
+						provinciaIns,
+						localidadIns,
+						direccionIns,
+						cpIns,
+						fechaIni,
+						fechaFin) VALUES(
+									'$this->titulacion',
+									'$cursoAcademico',
+									'$nombre' , 
+									'$apellidos', 
+									'$dni', 
+									'$tutorA', 
+									'$tutorE',
+									'$nombreIns', 
+									'$cif', 
+									'$provinciaIns', 
+									'$localidadIns', 
+									'$direccionIns', 
+									'$cpIns',
+									'$fechaIni', 
+									'$fechaFin')";
+
+						$result = $this->mysqli->query($sql);
+						//echo $sql;
+		}
+
 
 	}
 
 	function ADD_EP(){
+		$dni = $this->lista['dni'];
+		$sql = "SELECT dni FROM EDUCACION_PRIMARIA WHERE (dni = '$dni')";
+		$result = $this->mysqli->query($sql);
+		$num_rows = mysqli_num_rows($result); 
+		if($num_rows > 0){
+			echo "DNI duplicado";
+		}else{
+
+			$cursoAcademico = $this->lista['cursoAcademico'];
+			$nombre = $this->lista['nombre'];
+			$apellidos = $this->lista['apellidos'];
+			$mencion = $this->lista['mencion'];
+			$tutorA = $this->lista['tutorA'];
+			$tutorE = $this->lista['tutorE'];
+			$nombreIns = $this->lista['nombreIns'];
+			$cif = $this->lista['cif'];
+			$provinciaIns = $this->lista['provinciaIns'];
+			$localidadIns = $this->lista['localidadIns'];
+			$direccionIns = $this->lista['direccionIns'];
+			$cpIns = $this->lista['cpIns'];
+			$emailIns = $this->lista['emailIns'];
+			$fechaIni = $this->lista['fechaIni'];
+			$fechaFin = $this->lista['fechaFin'];
+			//$horasPrac = $this->lista['horasPrac'];
+
+				$sql = "INSERT INTO EDUCACION_PRIMARIA (
+						titulacion,
+						cursoAcademico,
+						nombre,
+						apellidos,
+						dni,
+						mencion,
+						tutorA,
+						tutorE,
+						nombreIns,
+						cif,
+						provinciaIns,
+						localidadIns,
+						direccionIns,
+						cpIns,
+						fechaIni,
+						fechaFin) VALUES(
+									'$this->titulacion',
+									'$cursoAcademico',
+									'$nombre' , 
+									'$apellidos', 
+									'$dni', 
+									'$tutorA', 
+									'$tutorE',
+									'$nombreIns', 
+									'$cif', 
+									'$provinciaIns', 
+									'$localidadIns', 
+									'$direccionIns', 
+									'$cpIns',
+									'$fechaIni', 
+									'$fechaFin')";
+
+						$result = $this->mysqli->query($sql);
+						//echo $sql;
+		}
 
 	}
 
