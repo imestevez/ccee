@@ -16,43 +16,43 @@
             <h6>*Campo Obligatorio</h6>
         </section>
         <section class="texto">
-        <form action="" method="post" name="trabajosocial" id="trabajosocial">          
+        <form action="../Controllers/titulacionesController.php" method="post" name="trabajosocial" id="trabajosocial">          
             <fieldset>
                 <legend>Curso Académico <h7 class="asterisco">*</h7></legend> 
-                <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4"> / 
-                <input type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4">
+                <input name="curso1" type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4"> / 
+                <input name="curso2" type="text" required="true" pattern="[0-9]{4}" size="4" maxlength="4">
             </fieldset>
             <fieldset>
                 <legend>Nome <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-zñÑçÇ\s]{1,30}$">
+                <input name="nombre" type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-zñÑçÇáéíóúÁÉÍÓÚ\s]{1,30}$">
             </fieldset>
             <fieldset>
                 <legend>Apelidos <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" size="50" maxlength="50" pattern="^[A-Za-zñÑçÇ\s]{1,50}$">
+                <input name="apellidos" type="text" required="true" size="50" maxlength="50" pattern="^[A-Za-zñÑçÇáéíóúÁÉÍÓÚ\s]{1,50}$">
             </fieldset>
             <fieldset>
                 <legend>NIF <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" name="dni" pattern="^[0-9]{8}[A-Za-z]{1}$" size="9" maxlength="9" onblur=" validarDni(this)"><p id="dni" style="color: red"></p>
+                <input name="dni" type="text" required="true" pattern="^[0-9]{8}[A-Za-z]{1}$" size="9" maxlength="9" onblur=" validarDni(this)"><p id="dni" style="color: red"></p>
             </fieldset>
             <fieldset>
                 <legend>Enderezo <h7 class="asterisco">*</h7></legend>
-                <label> Provincia: </label><input type="text" required="true"  size="30" maxlength="30" pattern="^[A-Za-zñÑçÇ\s]{1,30}$"> 
-                <label> Localidade: </label><input type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-zñÑçÇ\s]{1,30}$"> <br><br>
-                <label> Dirección: </label><input type="text" required="true" size="50" maxlength="50"> 
-                <label> CP: </label><input type="text" required="true" pattern="^[0-9]{5}$" size="5" maxlength="5">
+                <label> Provincia: </label><input name="provincia" type="text" required="true"  size="30" maxlength="30" pattern="^[A-Za-zñÑçÇ\s]{1,30}$"> 
+                <label> Localidade: </label><input name="localidad" type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-zñÑçÇ\s]{1,30}$"> <br><br>
+                <label> Dirección: </label><input name="direccion" type="text" required="true" size="50" maxlength="50"> 
+                <label> CP: </label><input name="cp" type="text" required="true" pattern="^[0-9]{5}$" size="5" maxlength="5">
             </fieldset>
             <fieldset>
                 <legend>Teléfono de contacto</legend>
-                <input type="text" pattern="[0-9]{9}" size="9" maxlength="9">
+                <input name="telefono" type="text" pattern="[0-9]{9}" size="9" maxlength="9">
             </fieldset>
             <fieldset>
-                <legend>E-mail</legend>
-                <input type="text" required="true" size="50" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}">
+                <legend>E-mail <h7 class="asterisco">*</h7></legend>
+                <input name="email" type="text" required="true" size="50" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}">
             </fieldset>
             <fieldset>
                 <legend>Titor/a Académico <h7 class="asterisco">*</h7></legend>
                 <label>Elixe desta lista o nome do teu titor/a da Facultade</label><br>
-                <select required="true">
+                <select name="tutorA" required="true">
                   <option value="" selected="true">--Elixa Opción</option>
                   <option value="Pepe">Pepe</option>
                   <option value="Ana">Ana</option>
@@ -64,42 +64,42 @@
                 <legend>Horas titorizadas</legend>
                 <label>No caso de ter mais de un tutor, debes indicar cantas horas titorizou cada un.
                 Por exemplo José Pérez Pérez 250h</label> <br>
-                <textarea rows="5" cols="60"  maxlength="60" ></textarea>
+                <textarea name="horasT" rows="5" cols="60"  maxlength="60" ></textarea>
             </fieldset>
             <fieldset>
                 <legend>Nome da institución <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" size="30" maxlength="30" >
+                <input name="nombreIns" type="text" required="true" size="30" maxlength="30" >
             </fieldset>
             <fieldset>
                 <legend>CIF ou NIF da empresa <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" size="9" maxlength="9">
+                <input name="cif" type="text" required="true" size="9" maxlength="9">
             </fieldset>
             <fieldset>
                 <legend>Enderezo da institución <h7 class="asterisco">*</h7></legend>
-                <label> Provincia: </label><input type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-zñÑçÇ\s]{1,30}$" >
-                <label> Localidade: </label><input type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-zñÑçÇ\s]{1,30}$"><br><br>
-                <label> Dirección: </label> <input type="text" required="true" size="50" maxlength="50" >
-                <label> CP: </label> <input type="text" required="true" pattern="[0-9]{5}" size="5" maxlength="5">
+                <label> Provincia: </label><input name="provinciaIns" type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-zñÑçÇ\s]{1,30}$" >
+                <label> Localidade: </label><input name="localidadIns" type="text" required="true" size="30" maxlength="30" pattern="^[A-Za-zñÑçÇ\s]{1,30}$"><br><br>
+                <label> Dirección: </label> <input name="direccionIns" type="text" required="true" size="50" maxlength="50" >
+                <label> CP: </label> <input name="cpIns" type="text" required="true" pattern="[0-9]{5}" size="5" maxlength="5">
             </fieldset>
             <fieldset>
                 <legend>Teléfono de contacto coa institución</legend>
-                <input type="text" size="9" maxlength="9" pattern="[0-9]{9}">
+                <input name="telefonoIns" type="text" size="9" maxlength="9" pattern="[0-9]{9}">
             </fieldset>
             <fieldset>
                 <legend>E-mail de contacto coa institución</legend>
-                <input type="text" size="50" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}">
+                <input name="emailIns" type="text" size="50" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}">
             </fieldset>
             <fieldset>
                 <legend>Data de inicio do Practicum <h7 class="asterisco">*</h7></legend>
-                <input type="date" required="true">
+                <input name="fechaIni" type="date" required="true">
             </fieldset>
             <fieldset>
                 <legend>Data de finalización do Practicum <h7 class="asterisco">*</h7></legend>
-                <input type="date" required="true">
+                <input name="fechaFin" type="date" required="true">
             </fieldset>
             <fieldset>
                 <legend>Horas totais do Practicum <h7 class="asterisco">*</h7></legend>
-                <input type="text" required="true" pattern="^[0-9]{1,4}$" size="4" maxlength="4" >
+                <input name="horasPrac" type="text" required="true" pattern="^[0-9]{1,4}$" size="4" maxlength="4" >
             </fieldset>
             <input type="text" name="titulacion" style="visibility: hidden;" value="trabajosocial"><br>
             <button type="submit" form="trabajosocial" value="Submit" onclick="validar('trabajosocial')">Enviar</button>

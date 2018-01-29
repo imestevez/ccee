@@ -1,10 +1,11 @@
 <?php
 
-include '../Models/ModeloDB.php'
+include '../Models/ModeloDB.php';
 
 //datos del formulario de Trabajo social
 function get_data_from_TS(){
-
+$curso1 = null;
+$curso2 = null;
 $titulacion = null;
 $nombre = null;
 $apellidos = null;
@@ -13,6 +14,7 @@ $provincia = null;
 $localidad = null;
 $direccion = null;
 $cp = null;
+$telefono = null;
 $email = null;
 $tutorA = null;
 $horasT = null;
@@ -33,6 +35,13 @@ $cursoAcademico = null;
 	if(isset($_REQUEST['titulacion'])){
 		$titulacion = $_REQUEST['titulacion'];
 	}
+	if((isset($_REQUEST['curso1'])) && (isset($_REQUEST['curso2']))){
+		$curso1 = $_REQUEST['curso1'];
+		$curso2 = $_REQUEST['curso2'];
+
+		$cursoAcademico = $curso1."/".$curso2;
+	}
+
 	if(isset($_REQUEST['nombre'])){
 		$nombre = $_REQUEST['nombre'];
 	} 
@@ -119,9 +128,7 @@ $cursoAcademico = null;
 	if(isset($_REQUEST['horasPrac'])){
 		$horasPrac = $_REQUEST['horasPrac'];
 	}
-	if(isset($_REQUEST['cursoAcademico'])){
-		$horasPrac = $_REQUEST['cursoAcademico'];
-	}
+
 
 	$lista =array(
 		'nombre' => $nombre,
@@ -131,6 +138,7 @@ $cursoAcademico = null;
 		'localidad' => $localidad,
 		'direccion' => $direccion,
 		'cp' => $cp,
+		'telefono' => $telefono,
 		'email' => $email,
 		'tutorA' => $tutorA,
 		'horasT' => $horasT,
@@ -222,7 +230,7 @@ function get_data_from_ES(){
 
 	$ES = new MODELO_DB($titulacion, $lista);
 
-
+}
 //datos del formulario de Educacion Infantil
 function get_data_from_EI(){
 	$titulacion = null;

@@ -15,6 +15,12 @@ class MODELO_DB{
 		$this->titulacion = $titulacion;
 		$this->lista = $lista;
 
+		// incluimos la funcion de acceso a la bd
+		include_once '../Functions/Access_DB.php';
+		// conectamos con la bd y guardamos el manejador en un atributo de la clase
+		$this->mysqli = ConnectDB();
+
+
 		switch ($titulacion) {
 			case 'trabajosocial':
 				$this->ADD_TS();
@@ -29,39 +35,98 @@ class MODELO_DB{
 				$this->ADD_EP();
 				break;
 		}
-	// incluimos la funcion de acceso a la bd
-	include_once '../Functions/Access_DB.php';
-	// conectamos con la bd y guardamos el manejador en un atributo de la clase
-	$this->mysqli = ConnectDB();
 
 	}
 
 	function ADD_TS(){
+		$dni = $this->lista['dni'];
 
-			$sql = "INSERT INTO TRABAJO_SOCIAL VALUES(
-												`titulacion` = '$this->titulacion',
-												`nombre` = '$this->lista['nombre']' , 
-												`apellidos` = '$this->lista['']', 
-												`dni` = '$this->lista['']', 
-												`provincia` = '$this->lista['']' , 
-												`localidad`  = '$this->lista['']' , 
-												`direccion` = '$this->lista['']' , 
-												`cp` = '$this->lista['']', 
-												`telefono` = '$this->lista['']', 
-												`email` = '$this->lista['']' , 
-												`tutorA` = '$this->lista['']'  , 
-												`horasT`  = '$this->lista['']' , 
-												`nombreIns` = '$this->lista['']', 
-												`cif` = '$this->lista['']', 
-												`provinciaIns` = '$this->lista['']', 
-												`localidadIns` = '$this->lista['']', 
-												`direccionIns` = '$this->lista['']', 
-												`cpIns` = '$this->lista['']',
-												`telefonoIns` = '$this->lista['']', 
-												`emailIns` = '$this->lista['']', 
-												`fechaIni` = '$this->lista['']', 
-												`fechaFin` = '$this->lista['']', 
-												`horasPrac` = '$this->lista['']')";
+		$sql = "SELECT dni FROM TRABAJO_SOCIAL WHERE (dni = '$dni')";
+		$result = $this->mysqli->query($sql);
+		$num_rows = mysqli_num_rows($result); 
+		if($num_rows > 0){
+			echo "DNI duplicado";
+		}else{
+
+			$cursoAcademico = $this->lista['cursoAcademico'];
+			$nombre = $this->lista['nombre'];
+			$apellidos = $this->lista['apellidos'];
+			$provincia = $this->lista['provincia'];
+			$localidad = $this->lista['localidad'];
+			$direccion = $this->lista['direccion'];
+			$cp = $this->lista['cp'];
+			$telefono = $this->lista['telefono'];
+			$email = $this->lista['email'];
+			$tutorA = $this->lista['tutorA'];
+			$horasT = $this->lista['horasT'];
+			$nombreIns = $this->lista['nombreIns'];
+			$cif = $this->lista['cif'];
+			$provinciaIns = $this->lista['provinciaIns'];
+			$localidadIns = $this->lista['localidadIns'];
+			$direccionIns = $this->lista['direccionIns'];
+			$cpIns = $this->lista['cpIns'];
+			$telefonoIns = $this->lista['telefonoIns'];
+			$emailIns = $this->lista['emailIns'];
+			$fechaIni = $this->lista['fechaIni'];
+			$fechaFin = $this->lista['fechaFin'];
+			$horasPrac = $this->lista['horasPrac'];
+
+				$sql = "INSERT INTO TRABAJO_SOCIAL (
+						titulacion,
+						cursoAcademico,
+						nombre,
+						apellidos,
+						dni,
+						provincia,
+						localidad,
+						direccion,
+						cp,
+						telefono,
+						email,
+						tutorA,
+						horasT,
+						nombreIns,
+						cif,
+						provinciaIns,
+						localidadIns,
+						direccionIns,
+						cpIns,
+						telefonoIns,
+						emailIns,
+						fechaIni,
+						fechaFin,
+						horasPrac ) VALUES(
+									'$this->titulacion',
+									'$cursoAcademico',
+									'$nombre' , 
+									'$apellidos', 
+									'$dni', 
+									'$provincia' , 
+									'$localidad' , 
+									'$direccion' , 
+									'$cp', 
+									'$telefono', 
+									'$email' , 
+									'$tutorA'  , 
+									'$horasT' , 
+									'$nombreIns', 
+									'$cif', 
+									'$provinciaIns', 
+									'$localidadIns', 
+									'$direccionIns', 
+									'$cpIns',
+									'$telefonoIns', 
+									'$emailIns', 
+									'$fechaIni', 
+									'$fechaFin', 
+									'$horasPrac')";
+
+						$result = $this->mysqli->query($sql);
+						echo $sql;
+		}
+
+
+
 	}
 
 	function ADD_ES(){
